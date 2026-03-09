@@ -1,74 +1,70 @@
-# Zerochan Instant Image Downloader
+# Better Soundcloud Design
 
 <div align="center">
 
-A userscript that adds instant download buttons to images on Zerochan.net, allowing you to download full-resolution wallpapers directly from the gallery pages. Allow bulk download too.
+<img src="icons/logo.png" height="146">
+
+Improves Soundcloud's design by enhancing the default style, changing the style, and increasing the focus on a glassmorphism style with orange accents.
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![Greasy Fork Version](https://img.shields.io/greasyfork/v/565142?logo=greasyfork&color=%23670000)](https://greasyfork.org/fr/scripts/565142-zerochan-instant-image-downloader)
-[![GitHub Release](https://img.shields.io/github/v/release/AnytngV2/Zerochan-Instant-Image-Downloader?logo=github)](https://github.com/AnytngV2/Zerochan-Instant-Image-Downloader/releases/latest)
-[![GitHub Last Commit](https://img.shields.io/github/last-commit/AnytngV2/Zerochan-Instant-Image-Downloader?logo=github)](https://github.com/AnytngV2/Zerochan-Instant-Image-Downloader/commits/main)
-![GitHub file size in bytes](https://img.shields.io/github/size/AnytngV2/zerochan-instant-image-downloader/script.js)
+[![Greasy Fork Version](https://img.shields.io/greasyfork/v/?logo=greasyfork&color=%23670000)]()
+[![GitHub Release](https://img.shields.io/github/v/release/AnytngV2/Better-Soundcloud-Design?logo=github)](https://github.com/anytngv2/Better-Soundcloud-Design/releases/latest)
+[![GitHub Last Commit](https://img.shields.io/github/last-commit/AnytngV2/Better-Soundcloud-Design?logo=github)](https://github.com/anytngv2/Better-Soundcloud-Design/commits/main)
+![GitHub file size in bytes](https://img.shields.io/github/size/AnytngV2/Better-Soundcloud-Design/script.js)
 
-<img src="preview/preview2.png" alt="Zerochan Instant Image Downloader Preview" width="400"/></i>
+<img src="previews/profile.png" alt="Better Soundcloud Design Preview"/>
 
 </div>
 
 ## Features
 
-- Adds download buttons to each image thumbnail on Zerochan pages
-- Bulk download
-- Work on ***PC*** and ***mobile browsers***
-- Downloads images in their original full resolution
-- No need to navigate to individual image pages
-- Added a button to directly download the full-size image in preview mode.
-- Displays the version of your script and the latest version available in the footer of the site
+- **Dynamic Gradient Background**: Extracts and applies album/track artwork gradients as the page background
+- **Glassmorphism UI**: Adds blur effects and translucent backgrounds to controls and headers
+- **Orange Accent Theme**: Custom orange color scheme throughout the interface
+- **Animated Background Elements**: Subtle animated gradient circles when no artwork is available
+- **Profile Header Enhancement**: Redesigned profile pages with full-width header and improved spacing
+- **Streamlined Interface**: Removes clutter (sidebar modules, mobile app banners, upsells)
+- **Enhanced Buttons**: Styled like/share/repost buttons with hover effects
+- **Improved Track Lists**: Hover animations and better visual hierarchy
+- **Cross-browser Compatibility**: Works on Chrome, Firefox, Edge, Safari, Brave, and more
 
 ## Installation
 
 ### Option 1: Using Tampermonkey (Recommended)
 
-1. Install the [Tampermonkey extension](https://www.tampermonkey.net/) for your browser (Chrome, Firefox, Safari, Edge, etc.).
-2. Open Tampermonkey and create a new script.
-3. Copy and paste the entire contents of `script.js` into the script editor.
-4. Save the script.
+1. Install the [Tampermonkey extension](https://www.tampermonkey.net/) for your browser.
+2. [Install from Greasy Fork]() or create a new script and paste the contents of `script.js`.
+3. Save the script and navigate to [Soundcloud](https://soundcloud.com).
 
-### Option 2: Manual Injection
+### Option 2: Manual Installation
 
-1. Navigate to a Zerochan page with wallpapers (e.g., https://www.zerochan.net/).
-2. Open your browser's developer console (F12 or right-click > Inspect > Console).
-3. Copy and paste the entire contents of `script.js` into the console.
-4. Press Enter to execute the script.
+1. Install a userscript manager (Tampermonkey, Violentmonkey, or Greasemonkey).
+2. Create a new script and copy the entire contents of `script.js`.
+3. Save and visit [Soundcloud](https://soundcloud.com).
 
-### Option 3: Using Greasy Fork
+### Option 3: GitHub (Development Version)
 
-1. Install a userscript manager like [Tampermonkey](https://www.tampermonkey.net/).
-2. Visit the script page on [Greasy Fork](https://greasyfork.org/fr/scripts/565142-zerochan-instant-image-downloader) and search for "Zerochan instant image downloader".
-3. Click the "Install" button on the script page.
+1. Install a userscript manager.
+2. Copy the raw content from the [latest release](https://github.com/anytngv2/Better-Soundcloud-Design/releases/latest).
+3. Create a new script and paste the code.
 
 ## Usage
 
-1. After installing the script, visit any Zerochan gallery page.
-2. You'll see "Download" buttons overlaid on each image thumbnail.
-3. Click the button to instantly download the full-resolution image.
+1. Install the script and visit [Soundcloud](https://soundcloud.com).
+2. The design enhancements apply automatically to all pages.
+3. Navigate to any track, playlist, or profile to see the glassmorphism effects.
+4. The background gradient changes dynamically based on the current track artwork.
 
 ## Preview
 
-### Individual download button
-![Preview](preview/preview.png)
+|Profile|Music|
+|-|-|
+|![preview](previews/profile.png)|![preview](previews/music.png)|
 
-### Preview image download button
-![Preview](preview/preview_download_image_full_size.png)
+## How It Works
 
-### Bulk download tool
+The script monitors Soundcloud's DOM for artwork buffers and extracts their gradient backgrounds to apply them to the entire page. When no artwork is available, it falls back to a dark theme with animated orange gradient circles. All UI elements are enhanced with CSS backdrop filters for the glassmorphism effect.
 
-<div align="center">
-<img alt="" src="preview/preview_bulk_download.png" width="49%">
-<img alt="" src="preview/preview_bulk_download_2.png" width="49%">
-</div>
+## License
 
-
-## Note
-The script listens for page loads on Zerochan.net and dynamically adds download buttons to each image thumbnail. When clicked, these buttons fetch the full-resolution image URL and trigger a download without navigating away from the gallery page.
-
-If you are on phone, the code needs to fetch the json again with &screen=1 to get json data because phone mode don't load the json by default. And we try to fetch again with &mobile=1 because Zerochan switch user to pc version if you request the json with screen=1.
+MIT License - see [LICENSE](LICENSE) file for details.
