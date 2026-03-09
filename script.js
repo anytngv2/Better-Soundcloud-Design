@@ -6,7 +6,7 @@
 // @description 	Improves Soundcloud's design by enhancing the default styles
 // @author 			AnytngV2
 // @match           https://soundcloud.com/*
-// @icon 			https://static.zerochan.net/favicon.png
+// @icon 			https://raw.githubusercontent.com/anytngv2/Better-Soundcloud-Design/refs/heads/main/icons/logo.png
 // @license 		MIT
 // @compatible 		chrome
 // @compatible 		edge
@@ -19,13 +19,12 @@
 // @run-at 			document-end
 // @updateURL 		
 // @downloadURL 	
-// @require         file://E:\anytngv2\soundcloud-script\script.js
 // ==/UserScript==
 
 (function () {
     'use strict';
 
-    const VERSION = "1.0.0";
+    const VERSION = "1.2.1";
     console.log("ANTG2 - Soundcloud script loaded");
 
     // =================
